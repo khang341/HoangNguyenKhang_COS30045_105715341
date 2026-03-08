@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --page-bg: #fff8dc;
+  --card-bg: #fffdf3;
+  --gold: #f4c430;
+  --gold-light: #ffdd57;
+  --brown: #5a4026;
+  --text: #333;
+  --muted: #666;
+  --border: #ead9a0;
+  --footer: #8a6121;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--page-bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--gold);
+  padding: 12px 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #222;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.nav-links a:hover {
+  background: var(--gold-light);
+}
+
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 36px 20px 60px;
+}
+
+.page-intro {
+  margin-bottom: 24px;
+}
+
+.page-intro h1 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #d48806;
+}
+
+.chart-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+}
+
+.chart-card h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--brown);
+}
+
+.chart-note {
+  margin-top: 0;
+  margin-bottom: 14px;
+  color: var(--muted);
+}
+
+.note {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0 0;
+}
+
+.meta {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.meta-title {
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.meta-link {
+  margin: 0;
+  color: #444;
+}
+
+.footer-strip {
+  background: var(--footer);
+  color: #fff;
+  text-align: center;
+  padding: 14px;
+  font-size: 13px;
+}
+
+.responsive-svg-container {
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

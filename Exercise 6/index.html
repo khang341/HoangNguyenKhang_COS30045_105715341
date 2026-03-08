@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 6 Interactive Charts</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/visualisations.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">EnergyWatch</div>
+  <ul class="nav-links">
+    <li><a href="#histogram-section">Histogram</a></li>
+    <li><a href="#scatter-section">Scatterplot</a></li>
+  </ul>
+</header>
+
+<main class="page">
+  <section class="page-intro">
+    <h1>Exercise 6: Interactive Charts</h1>
+    <p>
+      This page presents two interactive D3 charts using television energy data.
+      The histogram can be filtered by screen technology, and the scatterplot
+      includes a tooltip.
+    </p>
+  </section>
+
+  <section class="chart-card" id="histogram-section">
+    <h2>Interactive Histogram</h2>
+    <p class="chart-note">
+      This chart shows the distribution of television energy consumption. Use the buttons to filter the histogram by screen technology.
+    </p>
+
+    <div id="filters" class="filters"></div>
+    <div id="histogram" class="responsive-svg-container" aria-label="Histogram of TV energy consumption"></div>
+  </section>
+
+  <section class="chart-card" id="scatter-section">
+    <h2>Interactive Scatterplot</h2>
+    <p class="chart-note">
+      This scatterplot shows the relationship between star rating and energy consumption. Hover over a point to see the screen size.
+    </p>
+
+    <div id="scatterplot" class="responsive-svg-container" aria-label="Scatterplot of energy consumption and star rating"></div>
+
+    <p class="note">
+      Different colours represent different screen technologies.
+    </p>
+  </section>
+</main>
+
+<footer class="footer-strip">
+  <span>© 2026 Hoang Nguyen Khang | COS30045 Exercise 6</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="js/shared-constants.js"></script>
+<script src="js/histogram.js"></script>
+<script src="js/scatterplot.js"></script>
+<script src="js/interactions.js"></script>
+<script src="js/load-data.js"></script>
+</body>
+</html>

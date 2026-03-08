@@ -1,0 +1,65 @@
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #fffef8;
+  border: 2px solid #ead9a0;
+  border-radius: 10px;
+}
+
+.axis-label {
+  font-size: 12px;
+  fill: #222;
+}
+
+.axis path,
+.axis line {
+  stroke: #666;
+}
+
+.axis text {
+  fill: #333;
+  font-size: 12px;
+}
+
+.bar {
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 10px 0 14px;
+}
+
+.filter {
+  padding: 8px 14px;
+  border: 0;
+  background: #f4c430;
+  color: #222;
+  border-radius: 22px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.filter.active {
+  background: #c88d16;
+  color: #fff;
+}
+
+.legend-text {
+  font-size: 12px;
+  fill: #333;
+}
+
+.tooltip rect {
+  fill: rgba(60, 60, 60, 0.92);
+}
+
+.tooltip text {
+  fill: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
