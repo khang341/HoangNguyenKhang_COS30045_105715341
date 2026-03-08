@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 5 Multi Chart Webpage</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">EnergyWatch</div>
+  <ul class="nav-links">
+    <li><a href="#scatter-card">Scatter</a></li>
+    <li><a href="#line-card">Line</a></li>
+    <li><a href="#bar-card">Bar</a></li>
+    <li><a href="#donut-card">Donut</a></li>
+  </ul>
+</header>
+
+<main>
+  <section class="page-intro">
+    <h1>Exercise 5 Multi Chart Webpage</h1>
+    <p>
+      This page presents four D3 charts about television energy use and power prices.
+      The charts are responsive and each one uses its own JavaScript file.
+    </p>
+  </section>
+
+  <section class="dashboard-grid">
+    <section class="chart-card" id="scatter-card">
+      <h2>Scatter Plot</h2>
+      <p class="chart-note">
+        This chart shows the relationship between star rating and yearly energy consumption.
+      </p>
+      <div id="scatter" class="chart-box"></div>
+    </section>
+
+    <section class="chart-card" id="line-card">
+      <h2>Line Chart</h2>
+      <p class="chart-note">
+        This chart shows the average spot power price over time from 1998 to 2024.
+      </p>
+      <div id="line" class="chart-box"></div>
+    </section>
+
+    <section class="chart-card" id="bar-card">
+      <h2>Bar Chart</h2>
+      <p class="chart-note">
+        This chart compares average energy consumption for 55 inch televisions by screen technology.
+      </p>
+      <div id="bar" class="chart-box"></div>
+      <div id="bar-legend" class="legend"></div>
+    </section>
+
+    <section class="chart-card" id="donut-card">
+      <h2>Donut Chart</h2>
+      <p class="chart-note">
+        This chart shows average energy consumption across all screen technologies.
+      </p>
+      <div id="donut" class="chart-box"></div>
+      <div id="donut-legend" class="legend"></div>
+    </section>
+  </section>
+</main>
+
+<footer>
+  <p>
+    © 2026 Hoang Nguyen Khang | COS30045 Exercise 5
+    <br>
+    GenAI tools were used to assist with development. All code was reviewed and understood by the author.
+  </p>
+</footer>
+
+<script src="js/utils.js"></script>
+<script src="js/scatter.js"></script>
+<script src="js/line.js"></script>
+<script src="js/barchart.js"></script>
+<script src="js/donut.js"></script>
+</body>
+</html>
