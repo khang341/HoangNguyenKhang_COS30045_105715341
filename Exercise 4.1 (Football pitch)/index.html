@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 4.1 Draw SVGs</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo" onclick="showPage('home')">
+      <img src="images/PowerIcon.png" alt="Power Logo">
+      <span>EnergyWatch</span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#drawing">Drawing</a></li>
+      <li><a href="#elements">Elements Used</a></li>
+      <li><a href="#reference">Reference</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="intro-section">
+    <h1>Exercise 4.1: Draw SVGs</h1>
+    <p>
+      This page shows a simple football pitch created with SVG. The design was
+      inspired by a football field icon and then simplified into my own version
+      with a cleaner layout and softer colours.
+    </p>
+  </section>
+
+  <section id="drawing" class="scene-section">
+    <div class="scene-card">
+      <h2>Simple Football Pitch</h2>
+
+      <svg viewBox="0 0 900 520" class="scene-svg" role="img" aria-labelledby="pitchTitle pitchDesc">
+        <title id="pitchTitle">Simple football pitch drawing</title>
+        <desc id="pitchDesc">
+          A football pitch with grass, field lines, a centre line, centre circle,
+          penalty areas, goal areas, penalty spots, goals, and title text.
+        </desc>
+
+        <!-- pitch background -->
+        <rect x="60" y="70" width="780" height="380" class="pitch"></rect>
+
+        <!-- outer border -->
+        <rect x="60" y="70" width="780" height="380" class="field-line"></rect>
+
+        <!-- centre line -->
+        <line x1="450" y1="70" x2="450" y2="450" class="field-line"></line>
+
+        <!-- centre circle -->
+        <circle cx="450" cy="260" r="55" class="field-line"></circle>
+
+        <!-- centre spot -->
+        <circle cx="450" cy="260" r="4" class="spot"></circle>
+
+        <!-- left penalty area -->
+        <rect x="60" y="145" width="120" height="230" class="field-line"></rect>
+
+        <!-- left goal box -->
+        <rect x="60" y="200" width="45" height="120" class="field-line"></rect>
+
+        <!-- left penalty spot -->
+        <circle cx="135" cy="260" r="4" class="spot"></circle>
+
+        <!-- right penalty area -->
+        <rect x="720" y="145" width="120" height="230" class="field-line"></rect>
+
+        <!-- right goal box -->
+        <rect x="795" y="200" width="45" height="120" class="field-line"></rect>
+
+        <!-- right penalty spot -->
+        <circle cx="765" cy="260" r="4" class="spot"></circle>
+
+        <!-- left goal -->
+        <rect x="35" y="220" width="25" height="80" class="goal"></rect>
+
+        <!-- right goal -->
+        <rect x="840" y="220" width="25" height="80" class="goal"></rect>
+
+        <!-- penalty arcs -->
+        <path d="M 180 220 Q 210 260 180 300" class="arc-line"></path>
+        <path d="M 720 220 Q 690 260 720 300" class="arc-line"></path>
+
+        <!-- labels -->
+        <text x="450" y="38" text-anchor="middle" class="scene-title">Football Pitch SVG</text>
+        
+
+      </svg>
+    </div>
+  </section>
+
+  <section id="elements" class="elements-section">
+    <h2>SVG Elements Used</h2>
+
+    <div class="elements-grid">
+      <div class="element-box">
+        <h3>Rect</h3>
+        <p>
+          Used for the main pitch, outer border, penalty boxes, goal boxes,
+          and the goals.
+        </p>
+      </div>
+
+      <div class="element-box">
+        <h3>Line</h3>
+        <p>
+          Used for the centre line that divides the field into two halves.
+        </p>
+      </div>
+
+      <div class="element-box">
+        <h3>Circle</h3>
+        <p>
+          Used for the centre circle, centre spot, and both penalty spots.
+        </p>
+      </div>
+
+      <div class="element-box">
+        <h3>Path</h3>
+        <p>
+          Used for the curved penalty arcs near both penalty areas.
+        </p>
+      </div>
+
+      <div class="element-box">
+        <h3>Text</h3>
+        <p>
+          Used for the page title and the note under the football pitch.
+        </p>
+      </div>
+
+      <div class="element-box">
+        <h3>SVG container</h3>
+        <p>
+          The full drawing is placed inside one SVG element with a viewBox so it
+          scales nicely on different screen sizes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reference" class="notes-section">
+    <h2>Reference</h2>
+    <p>
+      This football pitch was inspired by the Football Field vector on SVG Repo.
+      I simplified the structure and changed the presentation to make it feel
+      more like my own page style. The SVG Repo page lists the Football Field
+      vector and shows it under a CC0 license. :contentReference[oaicite:1]{index=1}
+    </p>
+
+    <div class="reference-box">
+      <p><strong>Source:</strong> SVG Repo, Football Field SVG Vector</p>
+      <p><strong>Reference used:</strong></p>
+      <code>https://staging.svgrepo.com/svg/3298/football-field?edit=true</code>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>
+    © 2026 Hoang Nguyen Khang | COS30045 Exercise 4.1
+    <br>
+    GenAI tools were used to assist with development. All code was reviewed and understood by the author.
+  </p>
+</footer>
+
+</body>
+</html>

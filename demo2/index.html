@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EnergyWatch</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo" onclick="showPage('home')">
+      <img src="images/PowerIcon.png" alt="Power Logo">
+      <span>EnergyWatch</span>
+    </div>
+
+    <ul class="nav-links">
+      <li id="nav-home"><a href="#home" onclick="showPage('home')">Home</a></li>
+      <li id="nav-tv"><a href="#tv" onclick="showPage('tv')">Televisions</a></li>
+      <li id="nav-about"><a href="#about" onclick="showPage('about')">About Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="home" class="page">
+    <h1>Welcome to EnergyWatch</h1>
+
+    <p>
+      Australians use many electrical appliances every day in their homes.
+      These appliances make life easier, more comfortable, and more enjoyable.
+      However, they also use electricity, which affects both household costs
+      and the environment.
+    </p>
+
+    <p>
+      EnergyWatch was created to help people better understand how much power
+      common appliances use. By learning more about energy use, consumers can
+      make smarter choices when buying new products and when using appliances
+      at home.
+    </p>
+
+    <p>
+      This website focuses on televisions sold in Australia. You can explore
+      different screen technologies and see how they compare in terms of
+      electricity use.
+    </p>
+  </section>
+
+  <section id="tv" class="page hidden">
+    <h1>Television Energy Use</h1>
+
+    <p>
+      This chart shows the average power use of televisions by screen technology.
+      The values are calculated using the mean power consumption for each type.
+    </p>
+
+    <img src="images/charts/bar charts.png"
+         alt="Average power use by screen technology">
+  </section>
+
+  <section id="about" class="page hidden">
+    <h1>About This Project</h1>
+
+    <p>
+      EnergyWatch is a student project developed for the unit COS30045. The aim
+      of this website is to present information in a clear and engaging way,
+      helping users understand appliance energy use in Australia.
+    </p>
+
+    <p>
+      The data used in this website comes from the Australian Government energy
+      rating register. It contains information about televisions currently sold
+      on the Australian market, including brand, model, screen size, and power
+      use.
+    </p>
+
+    <p>
+      This project also demonstrates the use of basic web technologies such as
+      HTML, CSS, and JavaScript, as well as data processing using KNIME. All
+      content has been reviewed and understood by the author.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>
+    © 2026 Hoang Nguyen Khang | COS30045
+    <br>
+    GenAI tools were used to assist with development. All code was reviewed
+    and understood by the author.
+  </p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
