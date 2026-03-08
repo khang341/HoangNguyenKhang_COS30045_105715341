@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #fff8dc;
+  color: #333;
+  line-height: 1.7;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4c430;
+  padding: 12px 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #222;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.nav-links a:hover {
+  background-color: #ffdd57;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
+
+.page-card {
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 28px;
+}
+
+h1 {
+  color: #d48806;
+  margin-top: 0;
+}
+
+h2 {
+  color: #5a4026;
+  margin-bottom: 12px;
+}
+
+p, li {
+  font-size: 16px;
+}
+
+.responsive-svg-container {
+  margin: 20px auto 0;
+  width: 100%;
+  max-width: 950px;
+}
+
+.responsive-svg-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #fffdf3;
+  border: 2px solid #e7d8a5;
+  border-radius: 10px;
+}
+
+.info-box {
+  background: #fff6d8;
+  border-left: 5px solid #f4c430;
+  padding: 14px 16px;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+.stats-list {
+  background: #fffdf3;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-top: 18px;
+}
+
+footer {
+  background-color: #f4c430;
+  text-align: center;
+  padding: 18px;
+  font-size: 14px;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.axis path,
+.axis line {
+  stroke: #666;
+}
+
+.axis text {
+  font-size: 12px;
+  fill: #333;
+}
+
+.bar {
+  fill: #f4c430;
+}
+
+.bar:hover {
+  fill: #e39b16;
+}
+
+.label-text {
+  font-size: 12px;
+  fill: #333;
+}
+
+.chart-title {
+  font-size: 24px;
+  font-weight: bold;
+  fill: #5a4026;
+}
+
+.note-text {
+  font-size: 14px;
+  fill: #5a4026;
+}
