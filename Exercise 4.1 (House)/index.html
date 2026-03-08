@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Exercise 4.1 Draw SVGs</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exercise 4.1 SVG Drawing</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header>
   <nav class="navbar">
-    <div class="logo" onclick="showPage('home')">
-      <img src="images/PowerIcon.png" alt="Power Logo">
+    <div class="logo">
+      <img src="images/PowerIcon.png" alt="logo">
       <span>EnergyWatch</span>
     </div>
 
@@ -24,150 +25,124 @@
 </header>
 
 <main>
-  <section class="intro-section">
-    <h1>Exercise 4.1: Draw SVGs</h1>
-    <p>
-      This page shows a simple football pitch created with SVG. The design was
-      inspired by a football field icon and then simplified into my own version
-      with a cleaner layout and softer colours.
-    </p>
-  </section>
 
-  <section id="drawing" class="scene-section">
-    <div class="scene-card">
-      <h2>Simple Football Pitch</h2>
+<section class="intro">
+<h1>Exercise 4.1: Draw SVGs</h1>
+<p>
+This page shows a simple house and garden created using SVG shapes.
+The drawing includes several SVG elements such as rectangles, circles,
+lines, paths, and groups.
+</p>
+</section>
 
-      <svg viewBox="0 0 900 520" class="scene-svg" role="img" aria-labelledby="pitchTitle pitchDesc">
-        <title id="pitchTitle">Simple football pitch drawing</title>
-        <desc id="pitchDesc">
-          A football pitch with grass, field lines, a centre line, centre circle,
-          penalty areas, goal areas, penalty spots, goals, and title text.
-        </desc>
+<section id="drawing" class="card">
 
-        <!-- pitch background -->
-        <rect x="60" y="70" width="780" height="380" class="pitch"></rect>
+<h2>SVG House Drawing</h2>
 
-        <!-- outer border -->
-        <rect x="60" y="70" width="780" height="380" class="field-line"></rect>
+<svg viewBox="0 0 800 450" class="scene">
 
-        <!-- centre line -->
-        <line x1="450" y1="70" x2="450" y2="450" class="field-line"></line>
+<!-- sky -->
+<rect x="0" y="0" width="800" height="260" class="sky"></rect>
 
-        <!-- centre circle -->
-        <circle cx="450" cy="260" r="55" class="field-line"></circle>
+<!-- grass -->
+<rect x="0" y="260" width="800" height="190" class="grass"></rect>
 
-        <!-- centre spot -->
-        <circle cx="450" cy="260" r="4" class="spot"></circle>
+<!-- sun -->
+<circle cx="700" cy="80" r="40" class="sun"></circle>
 
-        <!-- left penalty area -->
-        <rect x="60" y="145" width="120" height="230" class="field-line"></rect>
+<!-- clouds -->
+<g class="cloud">
+  <ellipse cx="150" cy="80" rx="30" ry="20"></ellipse>
+  <ellipse cx="180" cy="75" rx="28" ry="18"></ellipse>
+  <ellipse cx="210" cy="82" rx="25" ry="16"></ellipse>
+</g>
 
-        <!-- left goal box -->
-        <rect x="60" y="200" width="45" height="120" class="field-line"></rect>
+<!-- house body -->
+<rect x="330" y="200" width="140" height="110" class="house"></rect>
 
-        <!-- left penalty spot -->
-        <circle cx="135" cy="260" r="4" class="spot"></circle>
+<!-- roof -->
+<polygon points="310,200 400,140 490,200" class="roof"></polygon>
 
-        <!-- right penalty area -->
-        <rect x="720" y="145" width="120" height="230" class="field-line"></rect>
+<!-- door -->
+<rect x="385" y="245" width="30" height="65" class="door"></rect>
 
-        <!-- right goal box -->
-        <rect x="795" y="200" width="45" height="120" class="field-line"></rect>
+<!-- door knob -->
+<circle cx="410" cy="280" r="3" class="knob"></circle>
 
-        <!-- right penalty spot -->
-        <circle cx="765" cy="260" r="4" class="spot"></circle>
+<!-- windows -->
+<g class="window-group">
 
-        <!-- left goal -->
-        <rect x="35" y="220" width="25" height="80" class="goal"></rect>
+<rect x="350" y="220" width="30" height="30" class="window"></rect>
+<line x1="365" y1="220" x2="365" y2="250"></line>
+<line x1="350" y1="235" x2="380" y2="235"></line>
 
-        <!-- right goal -->
-        <rect x="840" y="220" width="25" height="80" class="goal"></rect>
+<rect x="420" y="220" width="30" height="30" class="window"></rect>
+<line x1="435" y1="220" x2="435" y2="250"></line>
+<line x1="420" y1="235" x2="450" y2="235"></line>
 
-        <!-- penalty arcs -->
-        <path d="M 180 220 Q 210 260 180 300" class="arc-line"></path>
-        <path d="M 720 220 Q 690 260 720 300" class="arc-line"></path>
+</g>
 
-        <!-- labels -->
-        <text x="450" y="38" text-anchor="middle" class="scene-title">Football Pitch SVG</text>
-        
+<!-- tree -->
+<rect x="150" y="230" width="20" height="70" class="tree-trunk"></rect>
 
-      </svg>
-    </div>
-  </section>
+<ellipse cx="160" cy="210" rx="40" ry="30" class="tree-top"></ellipse>
 
-  <section id="elements" class="elements-section">
-    <h2>SVG Elements Used</h2>
+<!-- path -->
+<path d="M 400 310 Q 360 360 380 450" class="path"></path>
 
-    <div class="elements-grid">
-      <div class="element-box">
-        <h3>Rect</h3>
-        <p>
-          Used for the main pitch, outer border, penalty boxes, goal boxes,
-          and the goals.
-        </p>
-      </div>
+<!-- title -->
+<text x="400" y="40" text-anchor="middle" class="title">
+My SVG House
+</text>
 
-      <div class="element-box">
-        <h3>Line</h3>
-        <p>
-          Used for the centre line that divides the field into two halves.
-        </p>
-      </div>
+</svg>
 
-      <div class="element-box">
-        <h3>Circle</h3>
-        <p>
-          Used for the centre circle, centre spot, and both penalty spots.
-        </p>
-      </div>
+</section>
 
-      <div class="element-box">
-        <h3>Path</h3>
-        <p>
-          Used for the curved penalty arcs near both penalty areas.
-        </p>
-      </div>
 
-      <div class="element-box">
-        <h3>Text</h3>
-        <p>
-          Used for the page title and the note under the football pitch.
-        </p>
-      </div>
+<section id="elements" class="card">
 
-      <div class="element-box">
-        <h3>SVG container</h3>
-        <p>
-          The full drawing is placed inside one SVG element with a viewBox so it
-          scales nicely on different screen sizes.
-        </p>
-      </div>
-    </div>
-  </section>
+<h2>SVG Elements Used</h2>
 
-  <section id="reference" class="notes-section">
-    <h2>Reference</h2>
-    <p>
-      This football pitch was inspired by the Football Field vector on SVG Repo.
-      I simplified the structure and changed the presentation to make it feel
-      more like my own page style. The SVG Repo page lists the Football Field
-      vector and shows it under a CC0 license. :contentReference[oaicite:1]{index=1}
-    </p>
+<ul>
+<li><strong>rect</strong> – house body, grass, sky, windows, door</li>
+<li><strong>circle</strong> – sun and door knob</li>
+<li><strong>ellipse</strong> – clouds and tree leaves</li>
+<li><strong>polygon</strong> – roof of the house</li>
+<li><strong>line</strong> – window dividers</li>
+<li><strong>path</strong> – garden path</li>
+<li><strong>text</strong> – title of the drawing</li>
+<li><strong>g</strong> – grouping windows and clouds</li>
+</ul>
 
-    <div class="reference-box">
-      <p><strong>Source:</strong> SVG Repo, Football Field SVG Vector</p>
-      <p><strong>Reference used:</strong></p>
-      <code>https://staging.svgrepo.com/svg/3298/football-field?edit=true</code>
-    </div>
-  </section>
+</section>
+
+
+<section id="reference" class="card">
+
+<h2>Reference</h2>
+
+<p>
+Some inspiration for SVG shapes and structure was taken from SVG examples
+and icon references.
+</p>
+
+<p>
+Example reference:
+</p>
+
+<p>
+https://staging.svgrepo.com/svg/3298/football-field
+</p>
+
+</section>
+
 </main>
 
 <footer>
-  <p>
-    © 2026 Hoang Nguyen Khang | COS30045 Exercise 4.1
-    <br>
-    GenAI tools were used to assist with development. All code was reviewed and understood by the author.
-  </p>
+<p>
+© 2026 Hoang Nguyen Khang | COS30045 Exercise 4.1
+</p>
 </footer>
 
 </body>
